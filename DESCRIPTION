@@ -1,0 +1,19 @@
+Package: C2PROCTTEST
+Title: SAS PROC TTEST Equivalent in R
+Version: 1.0.0
+Authors@R: person("Your", "Name", email = "your@email.com", role = c("aut", "cre"))
+Description: Replicates the output of SAS PROC TTEST in R for one-sample,
+    two independent samples, and paired samples t-tests. Produces console
+    tables matching SAS formatting including Statistics, Confidence Limits,
+    T-Tests, and Equality of Variances (Folded F) tables. Also produces
+    SAS-style diagnostic plots for each test type.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+    stats,
+    graphics,
+    grDevices
+Suggests:
+    dplyr
