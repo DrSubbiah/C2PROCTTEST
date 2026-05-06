@@ -1,11 +1,9 @@
 # C2PROCTTEST
-
 An R package that replicates the output of **SAS PROC TTEST** — tables and plots — for all three t-test types.
 
 ---
 
 ## What it does
-
 | Function | Test |
 |---|---|
 | `sas_one_sample()` | One-sample t-test |
@@ -19,16 +17,29 @@ Each function produces:
 ---
 
 ## Installation
-
 ```r
-# Install from GitHub
-devtools::install_github("yourusername/C2PROCTTEST")
+devtools::install_github("DrSubbiah/C2PROCTTEST")
+```
+
+---
+
+## Sample Datasets
+Two sample CSV datasets are available directly in this repository for testing and demonstration:
+
+| File | Description | Used in |
+|---|---|---|
+| `bweight.csv` | Birth weight data with `bweight` and `sex` columns | `sas_one_sample()`, `sas_two_sample()` |
+| `sleep.csv` | Sleep extra hours data with `extra` and `group` columns | `sas_paired()` |
+
+Download them from the repo and load with:
+```r
+bw    <- read.csv("bweight.csv")
+sleep <- read.csv("sleep.csv")
 ```
 
 ---
 
 ## Usage
-
 ```r
 library(C2PROCTTEST)
 
@@ -47,7 +58,6 @@ sas_paired(x, y, var_name = "group1 - group2")
 ---
 
 ## Output matches SAS
-
 | Feature | Included |
 |---|---|
 | N, Mean, Std Dev, Std Err, Min, Max per group | Yes |
@@ -62,5 +72,4 @@ sas_paired(x, y, var_name = "group1 - group2")
 ---
 
 ## Dependencies
-
 Base R only (`stats`, `graphics`, `grDevices`). No external packages required.
